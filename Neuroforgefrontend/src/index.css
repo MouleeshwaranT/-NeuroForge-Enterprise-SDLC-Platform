@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #0b0f19;
+  color: #f8fafc;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
+
+/* Default Theme (Dark Mode) */
+:root {
+  --theme-bg-app: #0b0f19;
+  --theme-bg-sidebar: #0f172a;
+  --theme-bg-navbar: #0f172a;
+  --theme-bg-card: #1e293b;
+  --theme-text-main: #f8fafc;
+  --theme-text-muted: #94a3b8;
+  --theme-border: rgba(255, 255, 255, 0.08);
+  --theme-nav-link: #94a3b8;
+  --theme-toggle-bg: #1e293b;
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] {
+  --theme-bg-app: #f8fafc;
+  --theme-bg-sidebar: #ffffff;
+  --theme-bg-navbar: #ffffff;
+  --theme-bg-card: #ffffff;
+  --theme-text-main: #0f172a;
+  --theme-text-muted: #64748b;
+  --theme-border: #e2e8f0;
+  --theme-nav-link: #475569;
+  --theme-toggle-bg: #f1f5f9;
+}
+
+.theme-bg-app {
+  background-color: var(--theme-bg-app) !important;
+  color: var(--theme-text-main);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-sidebar {
+  background-color: var(--theme-bg-sidebar) !important;
+  border-color: var(--theme-border) !important;
+  transition: background-color 0.2s ease;
+}
+
+.theme-navbar {
+  background-color: var(--theme-bg-navbar) !important;
+  border-color: var(--theme-border) !important;
+  transition: background-color 0.2s ease;
+}
+
+.theme-card {
+  background-color: var(--theme-bg-card) !important;
+  border: 1px solid var(--theme-border) !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.theme-text-main {
+  color: var(--theme-text-main) !important;
+}
+
+.theme-text-muted {
+  color: var(--theme-text-muted) !important;
+}
+
+.theme-logo-text {
+  color: var(--theme-text-main) !important;
+}
+
+.theme-nav-link {
+  color: var(--theme-nav-link) !important;
+}
+.theme-nav-link:hover {
+  color: #3b82f6 !important;
+  background-color: rgba(59, 130, 246, 0.08) !important;
+}
+
+.theme-toggle-container {
+  background-color: var(--theme-toggle-bg);
+  border-color: var(--theme-border) !important;
+}
+
+/* Light mode Bootstrap table overrides */
+[data-theme="light"] .table-dark {
+  --bs-table-bg: #ffffff;
+  --bs-table-color: #0f172a;
+  --bs-table-hover-bg: #f1f5f9;
+  --bs-table-border-color: #e2e8f0;
+}
+
+.hover-opacity-75:hover {
+  opacity: 0.85;
+  transition: opacity 0.2s ease-in-out;
+}

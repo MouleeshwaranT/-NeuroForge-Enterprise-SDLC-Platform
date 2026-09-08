@@ -1,0 +1,41 @@
+# Operating System & IDE Files
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*.tmp
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Environment & Credential Security (NO passwords, tokens, or keys committed)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.p12
+
+# Compressed Archives
+*.zip
+*.tar.gz
+*.7z
+
+# Backend Build & Target Dependencies
+Neuroforgebackend/target/
+Neuroforgebackend/.mvn/wrapper/maven-wrapper.jar
+Neuroforgebackend/*.log
+Neuroforgebackend/build/
+
+# Frontend Dependencies & Build Output
+Neuroforgefrontend/node_modules/
+Neuroforgefrontend/dist/
+Neuroforgefrontend/dist-ssr/
+Neuroforgefrontend/*.log
+Neuroforgefrontend/npm-debug.log*
+Neuroforgefrontend/yarn-debug.log*
+Neuroforgefrontend/yarn-error.log*
